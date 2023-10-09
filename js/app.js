@@ -49,3 +49,24 @@ console.log('prova loop');
 //         console.log(n, resto)
 //     }
 // }
+
+for (let i = 0; i < 100; i++) {
+    //stampa i numeri da 1 a 100, creando una variabile n = i + 1;
+    const n = i + 1;
+
+    //salvo variabili dei moduli 3 e 5
+    const mod3 = n % 3;
+    const mod5 = n % 5;
+
+    //Se i moduli 3 e moduli 5 sono uguali a 0, allora FIZZBUZZ!
+    if (mod3 === 0 && mod5 === 0) {
+        console.log(n, 'FIZZBUZZ!!');
+    } else if (mod3 === 0) {
+        console.log(n, 'FIZZ!')
+    } else if (mod5 === 0) {
+        console.log(n, 'BUZZ!')
+    }
+
+    console.log(n);
+}
+
