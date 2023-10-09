@@ -15,41 +15,6 @@ console.log('prova loop');
 
 // NB non manipolare i++ o i-- dentro il blocco for!!!!
 
-// //Conto da 1 a 100
-// for (let i = 0; i < 100; i++) { 
-//     const num = i + 1;
-//     console.log(num)
-
-//     const multipliTre = num % 3;
-//     const strTre = multipliTre.toString();
-//     console.log(strTre);
-
-//     const multipliCinque = num % 5;
-
-//     if (multipliTre === 0) {
-//         // console.log('Fizz!')
-//     }
-
-//     if (multipliCinque === 0) {
-//         // console.log('Buzz!')
-//     }
-// }
-// console.log('fine ciclo 2')
-
-
-//stampare solamente in numeri multipli di 3;
-// for (let i = 0; i < 100; i++) {
-//     let n = i + 1;
-
-//     const resto = n % 7
-//     // console.log(n, resto);
-//     //un numero multiplo di 3 è un numero che ha resto di zero.
-    
-//     if (resto === 0) {
-//         console.log(n, resto)
-//     }
-// }
-
 for (let i = 0; i < 100; i++) {
     //stampa i numeri da 1 a 100, creando una variabile n = i + 1;
     const n = i + 1;
@@ -60,13 +25,13 @@ for (let i = 0; i < 100; i++) {
 
     //Se i moduli 3 e moduli 5 sono uguali a 0, allora FIZZBUZZ!
     if (mod3 === 0 && mod5 === 0) {
-        console.log(n, 'FIZZBUZZ!!');
+        console.log('FIZZBUZZ!!');
     } else if (mod3 === 0) {
-        console.log(n, 'FIZZ!')
+        console.log('FIZZ!')
     } else if (mod5 === 0) {
-        console.log(n, 'BUZZ!')
+        console.log('BUZZ!')
+    } else {
+        console.log(n)
     }
-
-    console.log(n);
 }
 
