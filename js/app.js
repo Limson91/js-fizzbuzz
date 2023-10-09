@@ -15,23 +15,26 @@ console.log('prova loop');
 
 // NB non manipolare i++ o i-- dentro il blocco for!!!!
 
-//Conto da 1 a 100
-for (let i = 0; i < 100; i++) { 
-    const n = i + 1;
-    console.log(n)
+// //Conto da 1 a 100
+// for (let i = 0; i < 100; i++) { 
+//     const num = i + 1;
+//     console.log(num)
 
-    const multipliTre = n % 3;
-    const multipliCinque = n % 5;
+//     const multipliTre = num % 3;
+//     const strTre = multipliTre.toString();
+//     console.log(strTre);
 
-    if (multipliTre === 0) {
-        console.log('Fizz!')
-    }
+//     const multipliCinque = num % 5;
 
-    if (multipliCinque === 0) {
-        console.log('Buzz!')
-    }
-}
-console.log('fine ciclo 2')
+//     if (multipliTre === 0) {
+//         // console.log('Fizz!')
+//     }
+
+//     if (multipliCinque === 0) {
+//         // console.log('Buzz!')
+//     }
+// }
+// console.log('fine ciclo 2')
 
 
 //stampare solamente in numeri multipli di 3;
