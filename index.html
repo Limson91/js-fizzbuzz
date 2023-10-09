@@ -5,9 +5,34 @@
     <link rel="shortcut icon" href="#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .box {
+            height: 20px;
+            width: 20px;
+            padding: 5px;
+        }
+
+        .box--fizz {
+            background-color: coral;
+        }
+
+        .box--buzz {
+            background-color: lightskyblue;
+        }
+
+        .box--fizzbuzz {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="grid"></div>
     <script src="./js/app.js"></script>
 </body>
 </html>

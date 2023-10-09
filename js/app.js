@@ -15,6 +15,8 @@ console.log('prova loop');
 
 // NB non manipolare i++ o i-- dentro il blocco for!!!!
 
+const gridElement = document.querySelector('.grid')
+
 for (let i = 0; i < 100; i++) {
     //stampa i numeri da 1 a 100, creando una variabile n = i + 1;
     const n = i + 1;
@@ -23,15 +25,32 @@ for (let i = 0; i < 100; i++) {
     const mod3 = n % 3;
     const mod5 = n % 5;
 
+    let message = n+''
+    let className = ''
+
     //Se i moduli 3 e moduli 5 sono uguali a 0, allora FIZZBUZZ!
     if (mod3 === 0 && mod5 === 0) {
-        console.log('FIZZBUZZ!!');
+        message = 'FIZZBUZZ!'
+        className = 'box--fizzbuzz'
+        // console.log('FIZZBUZZ!!');
     } else if (mod3 === 0) {
-        console.log('FIZZ!')
+        message = 'FIZZ!'
+        className = 'box--fizz'
+        // console.log('FIZZ!')
     } else if (mod5 === 0) {
-        console.log('BUZZ!')
-    } else {
-        console.log(n)
-    }
-}
+        message = 'BUZZ!'
+        className = 'box--buzz'
+        // console.log('BUZZ!')
+    } 
+    
+    // else {
+    //     message = n+''
+    //     // console.log(n)
+    // }
 
+    console.log(message)
+
+    const boxHTML = '<div class"box ' + className  + '">' + message + '</div>'
+
+    gridElement.innerHTML += boxHTML
+}
