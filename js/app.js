@@ -1,56 +1,31 @@
-console.log('prova loop');
-
-//let i = 0 è il punto di partenza;
-//i < 10 è il punto di arrivo (in questo caso numeri minori di 10);
-//i++ o i-- sono incrementali o decrementali.
-
-//SCHEMA DI FUNZIONAMENTO
-// 1. assegnazione della variabile i (i=0;);
-// 2. verifica se i è minore o maggiore di un valore (i<10); 
-// 3. esecuzione codice DENTRO le parentesi graffe;
-// 4. incremento o decremento (i++ o i--);
-// 5. esecuzione codice DENTRO le parentesi graffe;
-// 6. verifica se i è ancora minore o maggiore del valore impostato.
-// 7. esecuzione codice finché la condizione è vera. Non appena i diventa maggiore di 10, il ciclo for si ferma.
-
-// NB non manipolare i++ o i-- dentro il blocco for!!!!
-
-const gridElement = document.querySelector('.grid')
+const gridDOMElement = document.querySelector('.grid');
+console.log(gridDOMElement);
 
 for (let i = 0; i < 100; i++) {
-    //stampa i numeri da 1 a 100, creando una variabile n = i + 1;
-    const n = i + 1;
+    let n = i + 1;
 
-    //salvo variabili dei moduli 3 e 5
-    const mod3 = n % 3;
-    const mod5 = n % 5;
+    const modul3 = n % 3;
+    const modul5 = n % 5;
 
-    let message = n+''
-    let className = ''
+    let message = n;
+    let className = 'box';
 
-    //Se i moduli 3 e moduli 5 sono uguali a 0, allora FIZZBUZZ!
-    if (mod3 === 0 && mod5 === 0) {
-        message = 'FIZZBUZZ!'
-        className = 'box--fizzbuzz'
-        // console.log('FIZZBUZZ!!');
-    } else if (mod3 === 0) {
-        message = 'FIZZ!'
-        className = 'box--fizz'
-        // console.log('FIZZ!')
-    } else if (mod5 === 0) {
-        message = 'BUZZ!'
-        className = 'box--buzz'
-        // console.log('BUZZ!')
-    } 
-    
-    // else {
-    //     message = n+''
-    //     // console.log(n)
-    // }
+    if (modul3 === 0 && modul5 === 0) {
+        message = 'FIZZBUZZ!';
+        className = 'fizzbuzz';
+    } else if (modul3 === 0) {
+        message = 'FIZZ!';
+        className = 'fizz';
+    } else if (modul5 === 0) {
+        message = 'BUZZ!';
+        className = 'buzz';
+    }
 
-    console.log(message)
+    console.log(message);
 
-    const boxHTML = '<div class"box ' + className  + '">' + message + '</div>'
+    const boxDOMElement = document.createElement('div');
+    boxDOMElement.classList.add(className);
+    boxDOMElement.innerHTML = message;
 
-    gridElement.innerHTML += boxHTML
+    gridDOMElement.append(boxDOMElement);
 }
