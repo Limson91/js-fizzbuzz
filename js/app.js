@@ -24,7 +24,7 @@ for (let i = 0; i < 100; i++) {
     console.log(message);
 
     const boxDOMElement = document.createElement('div');
-    boxDOMElement.classList.add(className);
+    boxDOMElement.classList.add('box', className);
     boxDOMElement.innerHTML = message;
 
     gridDOMElement.append(boxDOMElement);
